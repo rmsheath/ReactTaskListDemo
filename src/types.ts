@@ -10,6 +10,10 @@ export interface Task {
   deleted?: boolean;
 }
 
+export interface List {
+  id: number | string;
+  title: string;
+}
 export type GroupType = "all" | "starred" | "completed" | "deleted";
 
 export interface Group {

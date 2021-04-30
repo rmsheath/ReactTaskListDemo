@@ -2,7 +2,7 @@ import { Fragment, useState } from "react";
 import { Bin, CircleChecked, Inbox, Star } from "./icons";
 import "./styles.css";
 import { TaskView } from "./TaskView";
-import { Group, GroupType, Task } from "./types";
+import { Group, GroupType, List, Task } from "./types";
 import { GroupView } from "./GroupView";
 
 const groups: Group[] = [
@@ -44,6 +44,13 @@ export default function App() {
   const [taskName, setTaskName] = useState("");
   const [search, setSearch] = useState("");
   const [selectedGroup, setSelectedGroup] = useState<GroupType>("all");
+  const [lists, setLists] = useState<List[]>([
+    {
+      id: 1,
+      title: "List one"
+    }
+  ]);
+
   const [tasks, setTasks] = useState<Task[]>([
     {
       id: 1,
@@ -147,7 +154,7 @@ export default function App() {
             </>
           ))}
         </div>
-        {/* <hr />
+        <hr />
         <div className="block">
           <h5 className="smallTitle">My Lists</h5>
           <ul>
@@ -155,7 +162,7 @@ export default function App() {
             <li>List two</li>
             <li>List three</li>
           </ul>
-        </div> */}
+        </div>
       </div>
       <div className="MainWrapper">
         <section className="TaskListView">
