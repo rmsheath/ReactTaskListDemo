@@ -1,0 +1,27 @@
+.taskView {
+  padding: var(--spacer-2);
+  border: 2px solid var(--color-border);
+  border-radius: 4px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.taskView:hover {
+  border: 2px solid var(--gray-500);
+  /* margin: -1px; */
+}
+
+.taskViewTitle,
+.taskViewIcons {
+  display: flex;
+  align-items: center;
+}
+
+.taskViewTitle > svg {
+  margin-right: var(--spacer-1);
+}
+
+.taskViewIcons > div {
+  margin-left: var(--spacer-2);
+}

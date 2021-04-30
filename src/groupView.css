@@ -1,0 +1,29 @@
+.Group {
+  padding: var(--spacer-1-5);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.GroupSelected {
+  background: var(--color-primary);
+  border-radius: 8px;
+  color: white;
+}
+
+.GroupTitle {
+  display: flex;
+  align-items: center;
+}
+
+.GroupSelected .GroupTitle svg {
+  fill: white;
+}
+
+.GroupTitle > svg {
+  margin-right: var(--spacer-2);
+}
+
+.GroupCount {
+  opacity: 0.5;
+}
